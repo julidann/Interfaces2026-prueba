@@ -1,0 +1,141 @@
+.landing-hero {
+    min-height: 390px;
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.2)),
+        url("../assets/img/landing-hero.jpg") center/cover;
+}
+
+.hero-content {
+    max-width: 560px;
+}
+
+.eyebrow {
+    margin-bottom: 8px;
+    color: var(--yellow);
+    font-weight: 800;
+}
+
+.hero-content h1 {
+    margin-bottom: 16px;
+    font-size: 42px;
+}
+
+.hero-content p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.plans-section {
+    padding: 45px 8%;
+    color: #111;
+    background: #d6d3d3;
+    text-align: center;
+}
+
+.plans-section h2,
+.trends-section h2 {
+    margin-bottom: 28px;
+}
+
+.plans-grid {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.plan-card {
+    min-height: 280px;
+    padding: 24px 18px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.plan-card.featured {
+    border: 2px solid var(--pink);
+}
+
+.plan-tag {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 10px;
+    border-radius: 12px;
+    background: var(--pink);
+    color: #fff;
+    font-size: 11px;
+}
+
+.trends-section {
+    padding: 45px 4%;
+    color: #111;
+    background: #fff;
+    text-align: center;
+}
+
+.trend-row {
+    margin-bottom: 28px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.trend-card {
+    min-height: 120px;
+    padding: 10px;
+    display: flex;
+    align-items: end;
+    border-radius: 4px;
+    background-color: #444;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 1px 4px #000;
+}
+
+.trend-1 {
+    background-image: linear-gradient(#0003, #0008), url("../assets/img/fortnite.jpg");
+}
+
+.trend-2 {
+    background-image: linear-gradient(#0003, #0008), url("../assets/img/gta-v.jpg");
+}
+
+.trend-3 {
+    background-image: linear-gradient(#0003, #0008), url("../assets/img/the-last-of-us.jpg");
+}
+
+.trend-4 {
+    background-image: linear-gradient(#0003, #0008), url("../assets/img/fc26.jpg");
+}
+
+@media (max-width: 800px) {
+    .plans-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trend-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+}

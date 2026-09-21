@@ -1,0 +1,253 @@
+body {
+    background: #151515;
+}
+
+.game-page {
+    width: min(1180px, 92%);
+    margin: auto;
+    padding: 30px 0 55px;
+}
+
+.game-player {
+    margin-bottom: 24px;
+}
+
+.game-stage {
+    min-height: 390px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #272727;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.7)),
+        url("../assets/img/spider-peg-cover.jpg") center/cover;
+    text-align: center;
+}
+
+.game-kicker {
+    margin-bottom: 8px;
+    color: var(--pink);
+    font-weight: 800;
+}
+
+.game-stage h1 {
+    margin-bottom: 8px;
+    font-size: 46px;
+    color: var(--pink);
+}
+
+.game-stage p {
+    margin-bottom: 18px;
+}
+
+.gallery-section,
+.game-info,
+.rating-section,
+.reviews-section,
+.related-section {
+    margin-bottom: 24px;
+    padding: 24px;
+    border-radius: 6px;
+    background: #242424;
+}
+
+.gallery-section h2,
+.game-info h2,
+.rating-section h2,
+.reviews-section h2,
+.related-section h2 {
+    margin-bottom: 18px;
+}
+
+.gallery-main {
+    min-height: 300px;
+    padding: 18px;
+    display: flex;
+    align-items: end;
+    border-radius: 5px;
+    background:
+        linear-gradient(#0002, #0009),
+        url("../assets/img/spider-peg-1.jpg") center/cover;
+}
+
+.gallery-main span {
+    font-weight: 700;
+}
+
+.gallery-main.changing {
+    animation: galleryChange 0.45s ease;
+}
+
+@keyframes galleryChange {
+    0% {
+        opacity: 0.35;
+        transform: scale(0.98);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.gallery-thumbnails {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.gallery-thumb {
+    min-width: 130px;
+    height: 76px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    background-color: #555;
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery-thumb.active {
+    border-color: var(--green);
+}
+
+.thumb-1 { background-image: url("../assets/img/spider-peg-1.jpg"); }
+.thumb-2 { background-image: url("../assets/img/spider-peg-2.jpg"); }
+.thumb-3 { background-image: url("../assets/img/spider-peg-3.jpg"); }
+.thumb-4 { background-image: url("../assets/img/spider-peg-4.jpg"); }
+
+.game-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.game-info p,
+.instructions {
+    line-height: 1.6;
+    color: #dddddd;
+}
+
+.instructions {
+    padding-left: 20px;
+}
+
+.game-data {
+    margin-top: 18px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.game-data div {
+    min-width: 120px;
+}
+
+.game-data dt {
+    color: var(--green);
+    font-size: 12px;
+}
+
+.game-data dd {
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+.rating-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.rating-grid article {
+    padding: 18px;
+    border-radius: 5px;
+    background: #333;
+}
+
+.rating-grid strong {
+    color: var(--pink);
+}
+
+.rating-grid p {
+    margin: 10px 0;
+    font-size: 13px;
+}
+
+.rating-grid small {
+    color: #aaa;
+}
+
+.review {
+    margin-bottom: 8px;
+}
+
+.review-title {
+    width: 100%;
+    padding: 14px;
+    display: flex;
+    justify-content: space-between;
+    border: 0;
+    background: #333;
+    color: #fff;
+    text-align: left;
+}
+
+.review-text {
+    display: none;
+    padding: 14px;
+    background: #1b1b1b;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.review.open .review-text {
+    display: block;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.related-card {
+    overflow: hidden;
+    border-radius: 5px;
+    background: #fff;
+    color: #111;
+}
+
+.related-card > div {
+    height: 135px;
+    background-color: #555;
+    background-size: cover;
+    background-position: center;
+}
+
+.related-card h3 {
+    min-height: 48px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.related-card .btn {
+    margin: 0 10px 12px;
+}
+
+.related-1 > div { background-image: url("../assets/img/fortnite.jpg"); }
+.related-2 > div { background-image: url("../assets/img/fc26.jpg"); }
+.related-3 > div { background-image: url("../assets/img/nfs-heat.jpg"); }
+.related-4 > div { background-image: url("../assets/img/hogwarts-legacy.jpg"); }
+
+@media (max-width: 800px) {
+    .game-info {
+        grid-template-columns: 1fr;
+    }
+
+    .rating-grid,
+    .related-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

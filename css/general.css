@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #050505;
+    --dark: #111111;
+    --gray: #2a2a2a;
+    --light-gray: #d8d8d8;
+    --white: #ffffff;
+    --pink: #d6006a;
+    --green: #00d814;
+    --yellow: #ffd600;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+    background: var(--black);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.site-header {
+    min-height: 70px;
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--pink);
+}
+
+.nav-guest,
+.nav-user {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-guest > a:not(.btn),
+.nav-user > a:not(.btn) {
+    position: relative;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.nav-guest > a:not(.btn)::after,
+.nav-user > a:not(.btn)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: var(--pink);
+    transition: width 0.25s;
+}
+
+.nav-guest > a:not(.btn):hover::after,
+.nav-user > a:not(.btn):hover::after {
+    width: 100%;
+}
+
+.btn {
+    display: inline-block;
+    border: 0;
+    border-radius: 5px;
+    padding: 11px 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Hover 1: aumenta */
+.btn-primary {
+    background: var(--pink);
+    color: var(--white);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.06);
+    background: #f00078;
+}
+
+/* Hover 2: sube y genera sombra */
+.btn-secondary {
+    background: var(--green);
+    color: #000;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 216, 20, 0.3);
+}
+
+/* Hover 3: cambia de color */
+.btn-yellow {
+    background: var(--yellow);
+    color: #000;
+    transition: background 0.25s, color 0.25s;
+}
+
+.btn-yellow:hover {
+    background: var(--pink);
+    color: var(--white);
+}
+
+.search-box {
+    width: 170px;
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 18px;
+    outline: none;
+}
+
+.user-avatar {
+    width: 38px;
+    height: 38px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--pink);
+    color: var(--white);
+    font-weight: 800;
+}
+
+.menu-button {
+    display: none;
+    border: 0;
+    background: transparent;
+    color: var(--white);
+    font-size: 24px;
+}
+
+.site-footer {
+    padding: 42px 7% 25px;
+    background: #101010;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.footer-columns div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-columns h3 {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #555;
+    font-size: 14px;
+}
+
+.footer-columns a {
+    color: var(--green);
+    font-size: 12px;
+}
+
+.footer-columns a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 22px;
+}
+
+.footer-bottom p {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.footer-bottom small {
+    color: #777;
+}
+
+@media (max-width: 700px) {
+    .site-header {
+        flex-wrap: wrap;
+    }
+
+    .nav-guest {
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}

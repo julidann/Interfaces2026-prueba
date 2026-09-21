@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAMEZONE | Inicio</title>
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+
+<div class="loader-screen" id="loader-screen">
+    <div class="spinner"></div>
+    <p>Cargando GAMEZONE...</p>
+    <strong id="loader-percent">0%</strong>
+</div>
+
+<header class="site-header home-header">
+    <div class="home-brand-row">
+        <button class="menu-button" id="menu-button" type="button" aria-label="Abrir menú">☰</button>
+        <a class="logo" href="home.html"><span>GAME</span>ZONE</a>
+    </div>
+
+    <nav class="nav-user" id="home-nav">
+        <a href="home.html">Inicio</a>
+        <a href="#juegos">Juegos</a>
+        <a href="#biblioteca">Mi biblioteca</a>
+    </nav>
+
+    <div class="home-actions">
+        <input class="search-box" id="game-search" type="search" placeholder="Buscar juego...">
+        <button class="user-avatar" type="button">U</button>
+    </div>
+</header>
+
+<main class="home-main">
+    <section class="home-hero">
+        <div class="home-hero-content">
+            <p class="hero-small">Bienvenido de nuevo.</p>
+            <h1>Spider-Man 2</h1>
+            <p>
+                Balanceate por Nueva York y enfrentá nuevas amenazas
+                junto a Peter Parker y Miles Morales.
+            </p>
+
+            <div class="hero-buttons">
+                <a class="btn btn-primary" href="juego.html">Jugar ahora</a>
+                <a class="btn btn-secondary" href="#juegos">Explorar juegos</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-section featured-section">
+        <div class="section-title">
+            <h2>Tu próxima aventura está a un clic</h2>
+            <div>
+                <button class="carousel-arrow" id="featured-prev" type="button" aria-label="Anterior">←</button>
+                <button class="carousel-arrow" id="featured-next" type="button" aria-label="Siguiente">→</button>
+            </div>
+        </div>
+
+        <div class="featured-row" id="featured-row">
+            <a class="featured-card feature-1" href="juego.html">
+                <span>Spider-Peg</span>
+            </a>
+
+            <a class="featured-card feature-2" href="#">
+                <span>God of War Ragnarök</span>
+            </a>
+
+            <a class="featured-card feature-3" href="#">
+                <span>Hogwarts Legacy</span>
+            </a>
+
+            <a class="featured-card feature-4" href="#">
+                <span>Cyberpunk 2077</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="home-section trends">
+        <h2>Tendencias actuales</h2>
+
+        <div class="trend-strip">
+            <div class="mini-game trend-a">Fortnite</div>
+            <div class="mini-game trend-b">GTA V</div>
+            <div class="mini-game trend-c">The Last of Us</div>
+            <div class="mini-game trend-d">EA Sports FC 26</div>
+        </div>
+    </section>
+
+    <section class="home-section catalog" id="juegos">
+        <h2>Todos los juegos</h2>
+
+        <div class="games-grid" id="games-grid">
+            <a class="game-card game-1" href="juego.html" data-title="Spider-Peg">
+                <div class="game-cover"></div>
+                <h3>Spider-Peg</h3>
+                <p>Puzzle</p>
+            </a>
+
+            <a class="game-card game-2" href="#" data-title="Grand Theft Auto V">
+                <div class="game-cover"></div>
+                <h3>Grand Theft Auto V</h3>
+                <p>Acción</p>
+            </a>
+
+            <a class="game-card game-3" href="#" data-title="Red Dead Redemption 2">
+                <div class="game-cover"></div>
+                <h3>Red Dead Redemption 2</h3>
+                <p>Aventura</p>
+            </a>
+
+            <a class="game-card game-4" href="#" data-title="Fortnite">
+                <div class="game-cover"></div>
+                <h3>Fortnite</h3>
+                <p>Battle Royale</p>
+            </a>
+
+            <a class="game-card game-5" href="#" data-title="Horizon Zero Dawn Complete Edition">
+                <div class="game-cover"></div>
+                <h3>Horizon Zero Dawn Complete Edition</h3>
+                <p>RPG</p>
+            </a>
+
+            <a class="game-card game-6" href="#" data-title="Cyberpunk 2077">
+                <div class="game-cover"></div>
+                <h3>Cyberpunk 2077</h3>
+                <p>RPG</p>
+            </a>
+
+            <a class="game-card game-7" href="#" data-title="God of War Ragnarok">
+                <div class="game-cover"></div>
+                <h3>God of War Ragnarök</h3>
+                <p>Acción</p>
+            </a>
+
+            <a class="game-card game-8" href="#" data-title="The Last of Us Part I">
+                <div class="game-cover"></div>
+                <h3>The Last of Us Part I</h3>
+                <p>Aventura</p>
+            </a>
+
+            <a class="game-card game-9" href="#" data-title="EA Sports FC 26">
+                <div class="game-cover"></div>
+                <h3>EA Sports FC 26</h3>
+                <p>Deportes</p>
+            </a>
+
+            <a class="game-card game-10" href="#" data-title="Need for Speed Heat">
+                <div class="game-cover"></div>
+                <h3>Need for Speed Heat</h3>
+                <p>Carreras</p>
+            </a>
+
+            <a class="game-card game-11" href="#" data-title="Rocket League">
+                <div class="game-cover"></div>
+                <h3>Rocket League</h3>
+                <p>Deportes</p>
+            </a>
+
+            <a class="game-card game-12" href="#" data-title="Hogwarts Legacy">
+                <div class="game-cover"></div>
+                <h3>Hogwarts Legacy</h3>
+                <p>RPG</p>
+            </a>
+        </div>
+
+        <p class="no-results" id="no-results">No se encontraron juegos.</p>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-columns">
+        <div>
+            <h3>Acerca</h3>
+            <a href="#">Sobre nosotros</a>
+            <a href="#">Novedades</a>
+            <a href="#">Contacto</a>
+        </div>
+
+        <div>
+            <h3>Recursos</h3>
+            <a href="#">Preguntas frecuentes</a>
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Privacidad</a>
+        </div>
+
+        <div>
+            <h3>Soporte</h3>
+            <a href="#">Centro de ayuda</a>
+            <a href="#">Estado del servicio</a>
+            <a href="#">Reportar un problema</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <a class="logo footer-logo" href="home.html"><span>GAME</span>ZONE</a>
+        <p>Seguinos en nuestras redes: Instagram · TikTok · X</p>
+        <small>© 2026 GAMEZONE</small>
+    </div>
+</footer>
+
+<script src="../js/home.js"></script>
+</body>
+</html>
